@@ -1,3 +1,4 @@
+import LinkarrowIcon from "../assets/Linkarrow";
 import Subitem from "../common/Subitem";
 import styles from "./card.module.css";
 import mainstyles from "./main.module.css";
@@ -39,7 +40,9 @@ export default function Experience() {
         })}
       </div>
       <br />
-      <a href="/cv.pdf">View full CV &nearr;</a>
+      <a style={{ color: "var(--color-dark-beige)" }} href="/cv.pdf">
+        View full CV <LinkarrowIcon fill="var(--color-dark-beige)" />
+      </a>
     </section>
   );
 }
