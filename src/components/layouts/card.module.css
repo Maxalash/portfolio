@@ -30,8 +30,9 @@
 }
 
 .card:hover {
-  background: var(--color-beige-hover);
+  background: var(--card-hover);
   opacity: 1;
   cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), inset 0 1px 3px var(--color-beige);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 var(--color-card-hover-shadow);
 }

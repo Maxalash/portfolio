@@ -18,7 +18,6 @@
   z-index: 20;
   margin-bottom: 1rem;
   width: 100vw;
-  /* background-color: var(--color-light-beige); */
   padding: 1.25rem 3rem;
   backdrop-filter: blur(8px);
   margin-inline: -3rem;

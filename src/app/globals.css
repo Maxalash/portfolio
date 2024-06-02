@@ -1,12 +1,13 @@
 :root {
   --color-light-beige: #f3e7d0;
   --color-beige: #e0c39a;
-  --color-beige-hover: #e0c39a33;
+  --color-beige-hover: #efe0c5;
   --color-dark-beige: #a3875b;
   --color-light-blue: #8fb9c9;
+  --color-light-blue-hover: #bae1f1;
   --color-medium-blue: #527d8f;
   --color-dark-blue: #2a3b44;
-  --color-blue-hover: #bae1f1;
+  --color-blue-hover: #32434c;
   --color-black: #161b1f;
   --color-white: #f8f4ec;
   --font-h1-size: 3rem;
@@ -16,13 +17,40 @@
   --font-caption-size: 0.8rem;
 
   --color-bg-main: var(--color-light-beige);
+  --color-title: var(--color-dark-blue);
+  --card-hover: var(--color-beige-hover);
+  --color-card-hover-shadow: var(--color-beige);
+  --color-contrast: var(--color-dark-beige);
 }
 
+[data-theme="dark"] {
+  --color-bg-main: var(--color-dark-blue);
+  --color-title: var(--color-light-beige);
+  --card-hover: var(--color-blue-hover);
+  --color-card-hover-shadow: var(--color-light-blue);
+  --color-contrast: var(--color-light-beige);
+}
+[data-theme="light"] {
+  --color-bg-main: var(--color-light-beige);
+  --color-title: var(--color-dark-blue);
+  --card-hover: var(--color-beige-hover);
+  --color-card-hover-shadow: var(--color-beige);
+  --color-contrast: var(--color-dark-beige);
+}
+/* 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-main: var(--color-dark-blue);
+    --color-bg-main: var(--color-dark-blue);
+    --color-title: var(--color-light-beige);
   }
 }
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-bg-main: var(--color-light-beige);
+    --color-title: var(--color-dark-blue);
+  }
+} */
 
 * {
   box-sizing: border-box;
@@ -43,15 +71,19 @@ html {
 body {
   background: var(--color-bg-main);
   overflow: visible;
+  transition: background 0.3s, color 0.3s;
+}
+[data-theme="dark"] body {
+  background: var(--color-bg-main);
 }
 
 /* Change the selection color */
 ::selection {
-  background: var(--color-blue-hover);
-  color: var(--color-dark-blue);
+  background: var(--color-light-blue-hover);
+  color: var(--color-dark-beige);
 }
 ::-moz-selection {
-  background: var(--color-beige-hover);
+  background: var(--color-light-blue-hover);
   color: var(--color-dark-beige);
 }
 
@@ -59,7 +91,7 @@ h1 {
   font-size: var(--font-h1-size);
   font-weight: 700;
   letter-spacing: -3px;
-  color: var(--color-dark-blue);
+  color: var(--color-title);
 }
 
 h2 {
@@ -67,7 +99,7 @@ h2 {
   font-weight: 500;
   line-height: 1.75rem;
   letter-spacing: -0.025em;
-  color: var(--color-dark-blue);
+  color: var(--color-title);
 }
 
 p,

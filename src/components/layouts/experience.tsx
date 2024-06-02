@@ -40,8 +40,8 @@ export default function Experience() {
         })}
       </div>
       <br />
-      <a style={{ color: "var(--color-dark-beige)" }} href="/cv.pdf">
-        View full CV <LinkarrowIcon fill="var(--color-dark-beige)" />
+      <a style={{ color: "var(--color-contrast)" }} href="/cv.pdf">
+        View full CV <LinkarrowIcon fill="var(--color-contrast)" />
       </a>
     </section>
   );
@@ -64,7 +64,7 @@ function Card({
         {label}
       </aside>
       <div className={styles.content}>
-        <p className="bold" style={{ color: "var(--color-dark-blue)" }}>
+        <p className="bold" style={{ color: "var(--color-title)" }}>
           {title}
         </p>
         <p className="subtext noselect">{description}</p>

@@ -22,7 +22,7 @@
 }
 .menu li:hover,
 .menu li.active {
-  color: var(--color-dark-blue);
+  color: var(--color-title);
 }
 
 .line {
@@ -35,7 +35,7 @@
 .menu li.active .line,
 .menu li:hover .line {
   width: 4rem;
-  background: var(--color-dark-blue);
+  background: var(--color-title);
 }
 
 @media screen and (min-width: 1024px) {
