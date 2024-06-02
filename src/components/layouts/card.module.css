@@ -1,0 +1,37 @@
+.card {
+  display: flex;
+  gap: 1rem;
+  padding: 0.7rem;
+  border-radius: 0.5rem;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.card aside {
+  width: 100px;
+  color: var(--color-light-blue);
+  flex-shrink: 0;
+  height: 100%;
+}
+
+.card .content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.section:hover .card:not(:hover) {
+  opacity: 0.5;
+}
+
+.card:hover {
+  background: var(--color-beige-hover);
+  opacity: 1;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), inset 0 1px 3px var(--color-beige);
+}

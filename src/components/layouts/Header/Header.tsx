@@ -2,17 +2,25 @@ import Image from "next/image";
 import styles from "./header.module.css";
 import React from "react";
 import Menu from "./menu";
+import GithubIcon from "@/components/assets/Github";
+import LinkedinIcon from "@/components/assets/Linkedin";
+import MailboxIcon from "@/components/assets/Mailbox";
 
 const links = [
   {
-    icon: "/github.svg",
+    icon: GithubIcon,
     alt: "github",
     link: "https://github.com/maxalash",
   },
   {
-    icon: "/linkedin.svg",
+    icon: LinkedinIcon,
     alt: "linkedin",
     link: "https://www.linkedin.com/in/makhmut-zhantleuov-a5088a1b5",
+  },
+  {
+    icon: MailboxIcon,
+    alt: "Mail",
+    link: "mailto:makhmut.zhantleuov@gmail.com",
   },
 ];
 
@@ -41,8 +49,8 @@ export default function Header() {
       <div className={styles.links}>
         {links.map((item) => {
           return (
-            <a key={item.alt} href={item.link} target="_blank">
-              <Image src={item.icon} alt={item.alt} width={24} height={24} />
+            <a key={item.alt} href={item.link}>
+              {item.icon({ fill: "var(--color-medium-blue)" })}
             </a>
           );
         })}

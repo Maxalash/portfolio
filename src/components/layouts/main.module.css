@@ -12,7 +12,7 @@
   scroll-margin-top: 6rem;
 }
 
-.main section div {
+.main section .section_head {
   position: sticky;
   top: 0;
   z-index: 20;
@@ -38,7 +38,7 @@
     padding-top: 6rem;
   }
 
-  .main section div {
+  .main section .section_head {
     display: none;
   }
 }

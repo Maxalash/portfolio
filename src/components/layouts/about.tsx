@@ -1,10 +1,12 @@
+import mainstyles from "./main.module.css";
+
 export default function About() {
   return (
     <section id="about">
-      <div>
+      <div className={mainstyles.section_head}>
         <h2 className="paragraph">ABOUT</h2>
       </div>
-      <p>
+      <p style={{ paddingInline: ".7rem" }}>
         Back in 2021, I decided to delve into the world of web development
         during my internship at LLC Inomad in Almaty. This initial experience
         led me down the path of coding and software engineering. Fast-forward to

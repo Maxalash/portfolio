@@ -1,14 +1,18 @@
 :root {
   --color-light-beige: #f3e7d0;
   --color-beige: #e0c39a;
+  --color-beige-hover: #e0c39a33;
   --color-dark-beige: #a3875b;
   --color-light-blue: #8fb9c9;
   --color-medium-blue: #527d8f;
   --color-dark-blue: #2a3b44;
+  --color-blue-hover: #bae1f1;
   --color-black: #161b1f;
+  --color-white: #f8f4ec;
   --font-h1-size: 3rem;
   --font-h2-size: 1.25rem;
   --font-size: 1rem;
+  --font-sub-size: 0.9rem;
   --font-caption-size: 0.8rem;
 
   --color-bg-main: var(--color-light-beige);
@@ -41,6 +45,16 @@ body {
   overflow: visible;
 }
 
+/* Change the selection color */
+::selection {
+  background: var(--color-blue-hover);
+  color: var(--color-dark-blue);
+}
+::-moz-selection {
+  background: var(--color-beige-hover);
+  color: var(--color-dark-beige);
+}
+
 h1 {
   font-size: var(--font-h1-size);
   font-weight: 700;
@@ -60,7 +74,11 @@ p,
 .paragraph {
   font-size: var(--font-size);
   line-height: 24px;
-  color: var(--color-dark-blue);
+  color: var(--color-medium-blue);
+}
+
+.subtext {
+  font-size: var(--font-sub-size);
 }
 
 .caption {
@@ -68,6 +86,12 @@ p,
 }
 .bold {
   font-weight: 600;
+}
+.noselect {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 a {
