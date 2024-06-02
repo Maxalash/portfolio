@@ -37,20 +37,6 @@
   --color-card-hover-shadow: var(--color-beige);
   --color-contrast: var(--color-dark-beige);
 }
-/* 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-bg-main: var(--color-dark-blue);
-    --color-title: var(--color-light-beige);
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --color-bg-main: var(--color-light-beige);
-    --color-title: var(--color-dark-blue);
-  }
-} */
 
 * {
   box-sizing: border-box;
